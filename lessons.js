@@ -4,7 +4,7 @@ const lessons = [
     title: "本（ほん）",
     explanation: "You would use this counter word to count something long and narrow. Like a pen. Or an umbrella! Hover your mouse over the question icon to see the readings.",
     color: "#cc5385",
-    images: ["/Assets/pen.jpg", "/Assets/umbrella.jpg"],
+    images: ["Assets/pen.jpg", "Assets/umbrella.jpg"],
     readings: [
       { number: 1, reading: "いっぽん", highlight: true },
       { number: 2, reading: "にほん" },
@@ -32,7 +32,7 @@ const lessons = [
     title: "枚（まい）",
     explanation: "This counter word is used for something flat and narrow. Think plate, towel or your movie tickets. Hover your mouse over the question icon to see the readings!",
     color: "#ff8210",
-    images: ["/Assets/plate.jpg", "/Assets/tickets.jpg"],
+    images: ["Assets/plate.jpg", "Assets/tickets.jpg"],
     readings: [
       { number: 1, reading: "いちまい" },
       { number: 2, reading: "にまい" },
@@ -58,7 +58,7 @@ const lessons = [
     title: "個（こ）",
     explanation: "This one is a bit trickier. It can be used for counting smaller things like cookies or buns. You can also count planets or phone apps with 個. Confusing, right? Don't worry, we will be looking at these examples in more detail later. Hover your mouse over the question icon to see the readings!",
     color: "#5c0601",
-    images: ["/Assets/bun.jpg", "/Assets/planet.jpg"],
+    images: ["Assets/bun.jpg", "Assets/planet.jpg"],
     readings: [
       { number: 1, reading: "いっこ", highlight: true  },
       { number: 2, reading: "にこ" },
@@ -94,4 +94,5 @@ document.querySelector(".button2").addEventListener("click", () => {
 document.querySelector(".button3").addEventListener("click", () => {
   window.location.href = "lesson.html?id=3";
 });
+
 
