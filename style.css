@@ -278,7 +278,7 @@ border-radius: 5px;
     border-radius: 1px;
     cursor: pointer;
     font-size: 30px;
-    position: absolute:
+    position: absolute;
 
 }
 
@@ -360,4 +360,5 @@ h2 {
 #quiz-question {
   font-size: 40px;
   padding: 20px;
+
 }
