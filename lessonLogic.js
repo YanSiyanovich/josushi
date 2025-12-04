@@ -3,7 +3,7 @@ const lessonId = parseInt(params.get("id"));
 const lesson = lessons.find(l => l.id === lessonId);
 
 const container = document.getElementById("lesson-images");
-container.innerHTML = ""; 
+container.innerHTML = "";
 lesson.images.forEach(src => {
     const img = document.createElement("img");
     img.src = src;
@@ -19,12 +19,11 @@ function fillTable(id, lessonData) {
         <tr><th>Number</th><th>Reading</th></tr>
     `;
 
-lessonData.readings.forEach(r => {
-    const row = document.createElement("tr");
-    row.innerHTML = `<td>${r.number}</td><td>${r.highlight ? '<b>' + r.reading + '</b>' : r.reading}</td>`;
-    table.appendChild(row);
-});
-
+    lessonData.readings.forEach(r => {
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>${r.number}</td><td>${r.highlight ? '<b>' + r.reading + '</b>' : r.reading}</td>`;
+        table.appendChild(row);
+    });
 }
 
 if (lesson) {
@@ -57,7 +56,7 @@ function showScreen(name) {
 }
 
 let currentQuestionIndex = 0;
-let answeredCorrectly = false; 
+let answeredCorrectly = false;
 
 document.getElementById("RenshuuBtn").addEventListener("click", () => {
     currentQuestionIndex = 0;
@@ -71,7 +70,8 @@ function showQuestion() {
     document.getElementById("quiz-question").textContent = q.prompt;
     document.getElementById("quiz-input").value = "";
     document.getElementById("quiz-feedback").textContent = "";
-    answeredCorrectly = false; 
+    answeredCorrectly = false;
+}
 
 function checkAnswer() {
     const inp = document.getElementById("quiz-input").value.trim();
@@ -81,18 +81,15 @@ function checkAnswer() {
 
 function nextQuestion() {
     currentQuestionIndex++;
-    const fb = document.getElementById("quiz-feedback");
-
     if (currentQuestionIndex >= lesson.questions.length) {
         document.getElementById("quiz-question").textContent = "お疲れ様！全部できた！";
         document.getElementById("quiz-input").style.display = "none";
         document.getElementById("NextBtn").style.display = "none";
-        fb.textContent = ""; 
+        document.getElementById("quiz-feedback").textContent = "";
         return;
     }
     showQuestion();
 }
-
 
 document.getElementById("NextBtn").addEventListener("click", () => {
     const fb = document.getElementById("quiz-feedback");
